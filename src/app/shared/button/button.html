@@ -1,0 +1,12 @@
+<span>
+  <!-- this ng-content will contain content that is not matched by icon class ng-content-->
+  <ng-content />
+</span>
+<!-- select attribute : select wants a css selector-->
+<!-- looking for elements with icon class -->
+<span class="icon">
+  <!-- fallback: if the icon selector fails fallback would work -->
+  <ng-content select="icon" >
+    ->
+  </ng-content>
+</span>
