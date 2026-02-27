@@ -1,4 +1,30 @@
-<div>
+<!-- <div id="dashboard">
+    <div class="dashboard-item">
+      <article>
+        <header>
+          <img src="status.png" alt="A signal symbol" />
+          <h2>Server Status</h2>
+        </header> -->
+<!-- class binding: set status class conditionally -->
+<!-- status class is added conditionally -->
+<!-- for single class -->
+<!-- <div [class.status]="currentStatus === 'online'"> -->
+<!-- for multiple class: set class as object where we set key-value pairs, where every key represents one css class and value should yield true or false depending on whether that class should be added or not -->
+<!-- These classes are added dynamically as per condition  -->
+<div
+  [class]="{
+    status: true,
+    'status-online': currentStatus === 'online',
+    'status-offline': currentStatus === 'offline',
+    'status-unknown': currentStatus === 'unknown',
+  }"
+>
+<!--   [style]="{
+    fontColor: 'red',
+  }" -->
+  <!-- for conditional style we can use [style]
+NOTE: for words with a  - use quotes or CamelCase 
+-->
   @if (currentStatus === 'online') {
     <p>Servers are online</p>
     <p>All systems are operational.</p>
@@ -10,3 +36,5 @@
     <p>Fetching server status failed.</p>
   }
 </div>
+<!-- </article>
+    </div> -->

@@ -12,15 +12,11 @@
         <a href="/">Management</a>
       </li>
       <li>
-        <!-- taking control of built in button by custom component -->
-        <button appButton>
-          Logout
-
-          <!-- <span class=".icon"></span> -->
-          <!-- allows to define a selector that can be matched from inside the component where yo uare trying to project this content into-->
-           <!-- here trying to project this icon in button component -->
-          <!-- <span ngProjectAs="icon"> -> </span> -->
-        </button>
+       <button appButton>
+        Logout 
+        <!--ngProjectAs: define a selector that can be defined inside custom button component  -->
+        <span ngProjectAs="icon">-></span> 
+       </button>
       </li>
     </ul>
   </nav>

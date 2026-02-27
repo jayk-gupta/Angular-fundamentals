@@ -1,5 +1,17 @@
-<p>
+<p class="control">
   <label>{{ label() }}</label>
-  <!-- can specify multiple selectors here seperated by comma -->
-  <ng-content select="input,textarea" />
+  <!-- only input and text area is selected -->
+   <!--Angular doesn't care which markup would end up in component eventually  
+   It only cares about what it sees in component template
+   there it see placeholder ng-content
+   -->
+   <!-- What can we do then
+   We can disable the scoping of css 
+   By default component styles are scoped to the component which they belong.
+   They can't affect anything out of component
+   -->
+   <!-- But here we want the styles to affect 
+   So FIX IS:   encapsulation: ViewEncapsulation.None 
+   -->
+  <ng-content select="input, textarea"/>
 </p>

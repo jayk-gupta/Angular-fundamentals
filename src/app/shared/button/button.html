@@ -1,12 +1,9 @@
-<span>
-  <!-- this ng-content will contain content that is not matched by icon class ng-content-->
-  <ng-content />
-</span>
-<!-- select attribute : select wants a css selector-->
-<!-- looking for elements with icon class -->
+<span> <ng-content /></span>
+<!-- select attribute: css selector ,select any content that matches the selector specified here -->
+<!-- <ng-content   select=".icon"/>  -->
 <span class="icon">
-  <!-- fallback: if the icon selector fails fallback would work -->
-  <ng-content select="icon" >
-    ->
-  </ng-content>
+  <!-- Fallback Content -->
+  <!-- We specify inside the ng-content to show the fallback content if it doesn't find the selected selector icon here then $ will be shown as inside ng-content -->
+  <ng-content select="icon"> $ </ng-content>
 </span>
+<!--  Element selected by the selector is the HOST Element -->
